@@ -17,7 +17,7 @@
       window.onload = function () {
         Particles.init({
           selector:'.background',
-          maxParticles: 200,
+          maxParticles: 50,
           minDistance:120,
           connectParticles:true
         });
@@ -28,10 +28,11 @@
 <%--    导航栏--%>
     <ul style="position: fixed;">
       <li class="liHead">
-        <a id="userMessage">
+        <a href="user/userUpdate.jsp" id="userMessage" style="display: inline-block;width: 50px;height: 50px;">
           <img src="image/head1.png" width="50px" height="50px"/>
-          <br>
+
         </a>
+        <br>
         <a id="a1" style="cursor:pointer"><span class="spanUserName">${sessionScope.user.getUsername() == null ? "用户名" : sessionScope.user.getUsername()}</span></a>
         <a id="a2" style="cursor:pointer"><span class="spanUserName">| 余额:</span><span class="spanUserName">${sessionScope.user.getUsername() == null ? "" : sessionScope.user.getUsermoney()}</span></a>
 
