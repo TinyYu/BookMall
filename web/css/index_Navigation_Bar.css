@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    /*background-color: #f5f6fa;*/
+    font-family: FangSong;
+}
+a{
+    text-decoration: none;
+    color: #f5f6fa;
+    font-size: 10px;
+}
+ul{
+    list-style: none;
+    width: 200px;
+    height: 100%;
+    background-color: #949FAC;
+    box-shadow: 0px 0px 10px #888888;
+}
+li{
+    height: 40px;
+    color: #f5f6fa;
+    text-align: center;
+    padding-top: 15px;
+}
+.liHead{
+    height: 100px;
+    background-color: #949FAC;
+}
+.liHead:hover{
+    background-color: #949FAC;
+}
+.liNa:hover{
+    background-color: #353b48;
+    cursor:pointer;
+}
+
+.spanUserName{
+    color: #f5f6fa;
+    font-size: 10px;
+}
+.liImg{
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+}
+.spanSeek{
+    position: fixed;
+    left: 30%;
+    top: 1%;
+    background-color: #949FAC;
+    display: inline-block;
+    width: 800px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+
+
+}
+.spanImg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+}
+.spanSeekInput{
+    position: absolute;
+    left: 40px;
+    top: 5px;
+    height: 30px;
+    width: 750px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.div1{
+    height: 20000px;
+    /*background-color: #2f3640;*/
+}
+
+.background{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
