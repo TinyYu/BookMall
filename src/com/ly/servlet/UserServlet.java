@@ -57,10 +57,11 @@ public class UserServlet extends HttpServlet {
                 request.getRequestDispatcher("user/userlogin.jsp").forward(request,response);
 
             }
-        } else if (action.equals("newPassword")){ // 修改密码
+        } else if (action.equals("newPassword")){ // 修改密码、用户名
             String username = request.getParameter("username");
             User user = new UserDAO().getUser(username);
             user.setUserpassword(request.getParameter("userpassword"));
+            user.setUsername(request.getParameter("newUsername"));
             new UserDAO().update(user);
             response.sendRedirect("user/userlogin.jsp");
 
@@ -75,6 +76,18 @@ public class UserServlet extends HttpServlet {
                 request.setAttribute("eamilYz","该邮箱不存在!");
                 request.getRequestDispatcher("user/userEamil.jsp").forward(request,response);
             }
+        } else if (action.equals("newName")){
+            HttpSession session = request.getSession();
+            System.out.println(session == null);
+            if (session == null){
+                response.sendRedirect("user/userlogin.jsp");
+            } else {
+                String newName = request.getParameter("newUserName");
+                User user = (User) session.getAttribute("user");
+                new  UserDAO().update(user);
+                response.sendRedirect("index.jsp");
+            }
+
         }
     }
 

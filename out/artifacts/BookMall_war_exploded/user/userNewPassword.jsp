@@ -41,14 +41,14 @@
         /* 登陆模块 */
         .loginBox{
             width: 400px;
-            height: 364px;
+            height: 500px;
             background-color: #FDFDFD;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0px 0px 10px #888888;
         }
         /* 用户名和密码输入框 */
-        .loginBox input[type="password"]{
+        .loginBox input[type="password"],.loginBox input[type="text"]{
             background: transparent;
             display: block;
             outline: none;
@@ -112,6 +112,18 @@
                     $("#span").html("密码不一致!");
                     return false;
                 }
+
+                // 验证用户名:必须由字母，数字下划线组成，并且长度5~12位
+                // 1.获取用户名输入框里的内容
+                var usernameText = $("#newUsername").val();
+                // 2.创建正则表达式
+                var usernamePatt = /^\w{5,12}$/
+                // 3.使用test方法验证
+                if (!usernamePatt.test(usernameText)){
+                    // 4.提示用户结果
+                    $("#span").html("用户名必须由字母，数字下划线组成，并且长度5~12位!");
+                    return false;
+                }
             });
 
         })
@@ -121,6 +133,8 @@
     <div class="loginBox">
         <h2>重置密码</h2>
         <form action="http://localhost:8080/BookMall/user" method="post">
+            <label>新用户名</label>
+            <input type="text" name="newUsername" id="newUsername">
             <label>新密码</label>
             <input type="password" name="userpassword" id="password"/>
             <label>确认新密码</label>
@@ -128,7 +142,7 @@
             <span id="span" style="color: red"></span>
             <input type="hidden" name="action" value="newPassword">
             <input type="hidden" name="username" value="${username}">
-            <input type="submit" value="重置密码" id="newPassword">
+            <input type="submit" value="重置密码和用户名" id="newPassword">
             <span>知道你的密码?</span><a href="userlogin.jsp">登陆</a>
         </form>
     </div>

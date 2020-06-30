@@ -102,6 +102,10 @@ public class UserDAO {
         return user;
     }
 
+    /**
+     * 跟新用户信息
+     * @param user
+     */
     public void update(User user){
         Connection c = null;
         PreparedStatement ps = null;
