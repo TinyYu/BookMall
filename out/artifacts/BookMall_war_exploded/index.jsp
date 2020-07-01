@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
   <head>
     <title>小说书城</title>
@@ -13,12 +14,11 @@
     <script src="<%=request.getContextPath()%>/lib/jquery.min.js"></script>
     <script>
       $(function () {
-        <%response.sendRedirect("http://localhost:8080/BookMall/book");%>
+          <c:if test="${empty listBook_bestsellers}">
+              <%response.sendRedirect("http://localhost:8080/BookMall/book");%>
+          </c:if>
       })
     </script>
-    <style>
-
-    </style>
   </head>
   <body>
 <%--    导航栏--%>
@@ -37,73 +37,120 @@
 
       <li class="liNa"><img src="image/Navigation_page.png" class="liImg"/> 首页</li>
       <li class="liNa"><img src="image/Navigation_book.png" class="liImg"/> 我的书库</li>
-      <li class="liNa"><img src="image/Navigation_store.png" class="liImg"/> 开设书店</li>
+        <a href="book/newBook.jsp" id="newBook"><li class="liNa" ><img src="image/Navigation_store.png" class="liImg"/> 上架图书</li></a>
       <li class="liNa"><img src="image/Navigational_shopping_cart.png" class="liImg"/> 购物车</li>
-      <li class="liNa"><img src="image/Navigation_collection.png" class="liImg"/> 收藏</li>
     </ul>
     <span class="spanSeek"><img src="image/seek.png" class="spanImg"><input type="text" name="bookName" class="spanSeekInput" placeholder="查找书名..."></span>
 
     <div class="div1">
-      <div class="div_herd">
-        <h2>畅销小说</h2>
-        <hr/>
+        <div class="div_herd">
+            <h2>畅销小说</h2>
+            <hr/>
+            <div class="container">
+                <c:forEach items="${listBook_bestsellers}" var="listbook" varStatus="st">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src=${listbook.getBook_path()}>
+                        </div>
+                        <div class="content">
+                            <h2>${listbook.getBook_name()}</h2>
+                            <p>${listbook.getBook_intro()}</p>
+                            <p>销量:${listbook.getBook_volume()}</p>
+                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="#">加入购物车</a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div> <!-- container -->
+        </div> <!-- div_herd -->
 
-        <div class="container">
-          <div class="box">
-            <div class="imgBx">
-              <img src="image/book_image/DouPoCangQong.jpg">
+        <div class="div_herd" style="top: 600px;">
+            <h2>玄幻</h2>
+            <a href="#">更多 》</a>
+            <hr/>
+            <div class="container">
+                <c:forEach items="${bookList_xh}" var="listbook" varStatus="st">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src=${listbook.getBook_path()}>
+                        </div>
+                        <div class="content">
+                            <h2>${listbook.getBook_name()}</h2>
+                            <p>${listbook.getBook_intro()}</p>
+                            <p>销量:${listbook.getBook_volume()}</p>
+                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="#">加入购物车</a>
+                        </div>
+                    </div>
+                </c:forEach>
             </div>
-            <div class="content">
-              <h2>斗破苍穹</h2>
-              <p>这里是属于斗气的世界，
-                没有花俏艳丽的魔法，
-                有的，仅仅是繁衍到巅峰的斗气！--天蚕土豆</p>
-              <a href="#">￥ 68</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="imgBx">
-              <img src="image/book_image/DiBa.jpg">
-            </div>
-            <div class="content">
-              <h2>帝霸</h2>
-              <p>千万年前，李七夜栽下一株翠竹。 　　
-                八百万年前，李七夜养了一条鲤鱼。 　　
-                五百万年前，李七夜收养一个小女孩。 　　
-                今天，李七夜一觉醒来，
-                翠竹修练成神灵，鲤鱼化作金龙，
-                小女孩成为九界女帝。--厌笔萧生</p>
-              <a href="#">￥ 50</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="imgBx">
-              <img src="image/book_image/XianNi.jpg">
-            </div>
-            <div class="content">
-              <h2>仙逆</h2>
-              <p>顺为凡，逆则仙，只在心中一念间…… --耳根</p>
-              <a href="#">￥ 70</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="imgBx">
-              <img src="image/book_image/ZheTian.jpg">
-            </div>
-            <div class="content">
-              <h2>遮天</h2>
-              <p>冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，
-                亘古长存。
-                这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。
-                九龙拉棺，究竟是回到了上古，还是来到了星空的彼... --辰东</p>
-              <a href="#">￥ 108</a>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <div class="div_herd" style="top: 1200px;">
+            <h2>科幻</h2>
+            <a href="#">更多 》</a>
+            <hr/>
+            <div class="container">
+                <c:forEach items="${bookList_kh}" var="listbook" varStatus="st">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src=${listbook.getBook_path()}>
+                        </div>
+                        <div class="content">
+                            <h2>${listbook.getBook_name()}</h2>
+                            <p>${listbook.getBook_intro()}</p>
+                            <p>销量:${listbook.getBook_volume()}</p>
+                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="#">加入购物车</a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+
+        <div class="div_herd" style="top: 1800px;">
+            <h2>都市</h2>
+            <a href="#">更多 》</a>
+            <hr/>
+            <div class="container">
+                <c:forEach items="${bookList_ds}" var="listbook" varStatus="st">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src=${listbook.getBook_path()}>
+                        </div>
+                        <div class="content">
+                            <h2>${listbook.getBook_name()}</h2>
+                            <p>${listbook.getBook_intro()}</p>
+                            <p>销量:${listbook.getBook_volume()}</p>
+                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="#">加入购物车</a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+
+        <div class="div_herd" style="top: 2400px;">
+            <h2>武侠</h2>
+            <a href="#">更多 》</a>
+            <hr/>
+            <div class="container">
+                <c:forEach items="${bookList_wx}" var="listbook" varStatus="st">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src=${listbook.getBook_path()}>
+                        </div>
+                        <div class="content">
+                            <h2>${listbook.getBook_name()}</h2>
+                            <p>${listbook.getBook_intro()}</p>
+                            <p>销量:${listbook.getBook_volume()}</p>
+                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="#">加入购物车</a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
     </div>
   </body>
 </html>

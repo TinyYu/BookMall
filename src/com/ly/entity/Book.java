@@ -1,22 +1,16 @@
 package com.ly.entity;
 
 public class Book {
-    private int book_id;
-    private String book_name;
-    private String book_type;
-    private String book_intro;
-    private double book_money;
-    private int book_volume;
+    private int book_id; // 图书id
+    private String book_name; // 书名
+    private String book_type; // 类型
+    private String book_intro; // 简介
+    private double book_money; // 价格
+    private int book_volume; // 销量
+    private String book_path; // 封面
+    private int book_userid; // 用户id
 
     public Book() {
-    }
-
-    public Book(String book_name, String book_type, String book_intro, double book_money, int book_volume) {
-        this.book_name = book_name;
-        this.book_type = book_type;
-        this.book_intro = book_intro;
-        this.book_money = book_money;
-        this.book_volume = book_volume;
     }
 
     public int getBook_id() {
@@ -67,6 +61,22 @@ public class Book {
         this.book_volume = book_volume;
     }
 
+    public String getBook_path() {
+        return book_path;
+    }
+
+    public void setBook_path(String book_path) {
+        this.book_path = book_path;
+    }
+
+    public int getBook_userid() {
+        return book_userid;
+    }
+
+    public void setBook_userid(int book_userid) {
+        this.book_userid = book_userid;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -76,6 +86,8 @@ public class Book {
                 ", book_intro='" + book_intro + '\'' +
                 ", book_money=" + book_money +
                 ", book_volume=" + book_volume +
+                ", book_path='" + book_path + '\'' +
+                ", book_userid=" + book_userid +
                 '}';
     }
 }

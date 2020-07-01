@@ -6,6 +6,7 @@ body{
     height: 100vh;
     /*background-color: #f5f6fa;*/
     font-family: FangSong;
+
 }
 a{
     text-decoration: none;
@@ -112,8 +113,8 @@ li{
     position: relative;
     left: 200px;
     background-color: #353b48;
-    width: 1720px;
-    height: 1000px;
+    width: 1700px;
+    height: 3000px;
 }
 .div1 .div_herd{
     position: absolute;
@@ -203,5 +204,13 @@ li{
     opacity: 1;
     transform: translateY(0px);
     transition-delay: 0.9s;
+}
+
+.div1 .div_herd1{
+    position: absolute;
+    width: 70%;
+    top: 100px;
+    left: 200px;
+    color: #f5f6fa;
 }
 

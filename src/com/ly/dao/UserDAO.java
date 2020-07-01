@@ -103,7 +103,7 @@ public class UserDAO {
     }
 
     /**
-     * 跟新用户信息
+     * 更新用户信息
      * @param user
      */
     public void update(User user){
