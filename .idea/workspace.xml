@@ -6,30 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c9d8bb-7901-4d2b-8bcb-a5100bcd440d" name="Default Changelist" comment="2020-6-28">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book/newBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/WEB-INF/classes/com/ly/dao/BookDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/WEB-INF/classes/com/ly/dao/BookDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/WEB-INF/classes/com/ly/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/WEB-INF/classes/com/ly/entity/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/WEB-INF/classes/com/ly/servlet/BookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/WEB-INF/classes/com/ly/servlet/BookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/css/index_Navigation_Bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/css/index_Navigation_Bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/image/Navigation_collection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookMall_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookMall/com/ly/dao/BookDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookMall/com/ly/dao/BookDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookMall/com/ly/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookMall/com/ly/entity/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookMall/com/ly/servlet/BookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookMall/com/ly/servlet/BookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ly/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ly/dao/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ly/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ly/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ly/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ly/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ly/servlet/BookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ly/servlet/BookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/index_Navigation_Bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/index_Navigation_Bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/image/Navigation_collection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="79c9d8bb-7901-4d2b-8bcb-a5100bcd440d" name="Default Changelist" comment="2020-6-28" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +53,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/ly/dao/BookDAO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1424">
-                  <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
+                <state relative-caret-position="489">
+                  <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -97,7 +74,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/book/newBook.jsp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="448">
@@ -122,8 +99,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/ly/servlet/BookServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
-                  <caret line="94" column="56" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+                <state relative-caret-position="531">
+                  <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -224,8 +201,8 @@
         <option value="$PROJECT_DIR$/src/com/ly/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/com/ly/servlet/BookServlet.java" />
         <option value="$PROJECT_DIR$/src/com/ly/entity/Book.java" />
-        <option value="$PROJECT_DIR$/src/com/ly/dao/BookDAO.java" />
         <option value="$PROJECT_DIR$/web/book/newBook.jsp" />
+        <option value="$PROJECT_DIR$/src/com/ly/dao/BookDAO.java" />
       </list>
     </option>
   </component>
@@ -236,9 +213,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-7" />
+    <option name="y" value="88" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -303,50 +280,6 @@
               <item name="BookMall" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-              <item name="book_image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookMall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -358,7 +291,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/mysql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -492,16 +425,15 @@
       <workItem from="1593525582094" duration="5398000" />
       <workItem from="1593580116869" duration="2882000" />
       <workItem from="1593584001791" duration="11446000" />
-      <workItem from="1593598087860" duration="1243000" />
+      <workItem from="1593598087860" duration="1945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114584000" />
+    <option name="totallyTimeSpent" value="115286000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1771" y="107" width="1936" height="1096" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49054053" visible="true" weight="0.18036287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -730,10 +662,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/book/newBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ly/dao/BookDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1424">
-          <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
+        <state relative-caret-position="489">
+          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -742,15 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ly/servlet/BookServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="94" column="56" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/book/newBook.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        <state relative-caret-position="531">
+          <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
         </state>
       </provider>
     </entry>
