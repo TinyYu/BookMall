@@ -98,4 +98,49 @@ public class BookDAO {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 返回指定图书
+     */
+    public Book getBook(String book_id){
+        Book book = new Book();
+        String sql = "select * from book where bookid=" + Integer.parseInt(book_id);
+        Connection c = null;
+        Statement s = null;
+        try {
+            c = mysqlISM.getConnection();
+            s = c.createStatement();
+            ResultSet rs = s.executeQuery(sql);
+            if (rs.next()){
+                book.setBook_id(rs.getInt("bookid")); //图书id
+                book.setBook_name(rs.getString("bookname")); //书名
+                book.setBook_type(rs.getString("booktype")); //类型
+                book.setBook_intro(rs.getString("bookintro")); //简介
+                book.setBook_money(rs.getDouble("bookmoney")); //价格
+                book.setBook_volume(rs.getInt("bookvolume")); //销量
+                book.setBook_userid(rs.getInt("bookuserid")); //上架用户id
+                book.setBook_path(rs.getString("bookpath")); //封面
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book;
+    }
+
+    /**
+     * 更新图书信息
+     */
+    public void update(Book book){
+        String sql = "UPDATE book SET bookvolume=? WHERE bookid=?";
+        Connection c = null;
+        PreparedStatement ps = null;
+        try {
+            c = mysqlISM.getConnection(); ps = c.prepareStatement(sql);
+            ps.setInt(1,book.getBook_volume());
+            ps.setInt(2,book.getBook_id());
+            ps.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

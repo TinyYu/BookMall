@@ -26,13 +26,11 @@ public class BookServlet extends HttpServlet {
         BookDAO bookDAO = new BookDAO();
         // 处理上架图书
         Book book = book_path(request,response);
-        System.out.println(book.toString());
         bookDAO.addBook(book);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         BookDAO bookDAO = new BookDAO();
 
         // 畅销小说
@@ -47,14 +45,22 @@ public class BookServlet extends HttpServlet {
         request.setAttribute("bookList_wx",classify("武侠",list1));
 
         request.getRequestDispatcher("index.jsp").forward(request,response);
+
     }
 
     // 对小说分类
     public List<Book> classify(String type,List<Book> lists){
         List<Book> list = new ArrayList<>();
+        int count = 0;
         for (Book book : lists){
             if (book.getBook_type().equals(type)){
-                list.add(book);
+                if (count != 4){
+                    list.add(book);
+                    count++;
+                } else {
+                    break;
+                }
+
             }
         }
         return list;
@@ -92,7 +98,11 @@ public class BookServlet extends HttpServlet {
                             book.setBook_money(Double.parseDouble(fileItem.getString("UTF-8")));
                         }
                         if (fileItem.getFieldName().equals("userid")){
-                            book.setBook_userid(Integer.parseInt(fileItem.getString()));
+                            if(fileItem.getString() == null){
+                                book.setBook_userid(0);
+                            } else {
+                                book.setBook_userid(Integer.parseInt(fileItem.getString()));
+                            }
                         }
                     } else {
                         // 上传文件
@@ -110,5 +120,7 @@ public class BookServlet extends HttpServlet {
         }
         return book;
     }
+
+
 
 }

@@ -37,7 +37,7 @@
 
       <li class="liNa"><img src="image/Navigation_page.png" class="liImg"/> 首页</li>
       <li class="liNa"><img src="image/Navigation_book.png" class="liImg"/> 我的书库</li>
-        <a href="book/newBook.jsp" id="newBook"><li class="liNa" ><img src="image/Navigation_store.png" class="liImg"/> 上架图书</li></a>
+        <a href="userbook/newBook.jsp" id="newBook"><li class="liNa" ><img src="image/Navigation_store.png" class="liImg"/> 上架图书</li></a>
       <li class="liNa"><img src="image/Navigational_shopping_cart.png" class="liImg"/> 购物车</li>
     </ul>
     <span class="spanSeek"><img src="image/seek.png" class="spanImg"><input type="text" name="bookName" class="spanSeekInput" placeholder="查找书名..."></span>
@@ -56,7 +56,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
                             <a href="#">加入购物车</a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
                             <a href="#">加入购物车</a>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
                             <a href="#">加入购物车</a>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="#">￥ ${listbook.getBook_money()}</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
                             <a href="#">加入购物车</a>
                         </div>
                     </div>

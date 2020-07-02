@@ -51,7 +51,8 @@ public class UserServlet extends HttpServlet {
                 String userpassword = request.getParameter("userpassword");
                 double usermoney = 10000;
                 int userstatus = 1;
-                User user = new User(username,userpassword,usereamil,userstatus,usermoney);
+                String userbook = null;
+                User user = new User(username,userpassword,usereamil,userstatus,usermoney,userbook);
                 new UserDAO().addHero(user);
                 request.setAttribute("username",username);
                 request.getRequestDispatcher("user/userlogin.jsp").forward(request,response);

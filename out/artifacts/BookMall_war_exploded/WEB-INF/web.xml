@@ -20,4 +20,31 @@
         <servlet-name>BookServlet</servlet-name>
         <url-pattern>/book</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserActionServlet</servlet-name>
+        <servlet-class>com.ly.servlet.UserActionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserActionServlet</servlet-name>
+        <url-pattern>/user_action</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <!-- 给filter别名 -->
+        <filter-name>BookFilter</filter-name>
+        <!-- 配置filter的全类名 -->
+        <filter-class>com.ly.filter.BookFilter</filter-class>
+    </filter>
+    <!-- filter-mapping配置Filter过滤器的拦截路径 -->
+    <filter-mapping>
+        <!-- filter-name表示当前的拦截路径给那个filter使用 -->
+        <filter-name>BookFilter</filter-name>
+        <!--
+            url-pattern配置拦截路径
+                / 表示请求地址为:http://ip:port/工程路径/ 映射到IDEA的web目录
+                /admin/* 表示请求地址为:http://ip:port/工程路径/admin/*
+         -->
+        <url-pattern>/userbook/*</url-pattern>
+    </filter-mapping>
 </web-app>

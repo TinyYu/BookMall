@@ -7,18 +7,20 @@ public class User {
     private int userstatus;  // 身份 1顾客 2店长
     private int id; // 用户id
     private double usermoney; // 用户余额
+    private String userbook; // 用户图书
 
 
 
     public User() {
     }
 
-    public User(String username, String userpassword, String usereamil, int userstatus, double usermoney) {
+    public User(String username, String userpassword, String usereamil, int userstatus, double usermoney, String userbook) {
         this.username = username;
         this.userpassword = userpassword;
         this.usereamil = usereamil;
         this.userstatus = userstatus;
         this.usermoney = usermoney;
+        this.userbook = userbook;
     }
 
     public String getUsername() {
@@ -69,6 +71,14 @@ public class User {
         this.usermoney = usermoney;
     }
 
+    public String getUserbook() {
+        return userbook;
+    }
+
+    public void setUserbook(String userbook) {
+        this.userbook = userbook;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -78,6 +88,7 @@ public class User {
                 ", userstatus=" + userstatus +
                 ", id=" + id +
                 ", usermoney=" + usermoney +
+                ", userbook='" + userbook + '\'' +
                 '}';
     }
 }
