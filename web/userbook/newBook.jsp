@@ -139,10 +139,10 @@
         </li>
 
         <a href="../index.jsp"><li class="liNa"><img src="../image/Navigation_page.png" class="liImg"/> 首页</li></a>
-        <a href="../index.jsp"><li class="liNa"><img src="../image/Navigation_book.png" class="liImg"/> 我的书库</li></a>
+        <a href="userLibrary.jsp"><li class="liNa"><img src="../image/Navigation_book.png" class="liImg"/> 我的书库</li></a>
         <a href="newBook.jsp"><li class="liNa" ><img src="../image/Navigation_store.png" class="liImg"/> 上架图书</li></a>
-        <a href="../index.jsp"><li class="liNa"><img src="../image/Navigational_shopping_cart.png" class="liImg"/> 购物车</li></a>
     </ul>
+
     <div class="newBookBox">
         <form action="http://localhost:8080/BookMall/book" method="post" enctype="multipart/form-data">
             <label>书名: </label><input name="book_name" type="text">

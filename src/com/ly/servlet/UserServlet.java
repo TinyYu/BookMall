@@ -13,7 +13,7 @@ import java.io.IOException;
 
 
 /**
- * 注册
+ * 用户登陆、注册、修改信息、退出登陆
  */
 @WebServlet(name = "UserServlet")
 public class UserServlet extends HttpServlet {
@@ -51,7 +51,7 @@ public class UserServlet extends HttpServlet {
                 String userpassword = request.getParameter("userpassword");
                 double usermoney = 10000;
                 int userstatus = 1;
-                String userbook = null;
+                String userbook = "2";
                 User user = new User(username,userpassword,usereamil,userstatus,usermoney,userbook);
                 new UserDAO().addHero(user);
                 request.setAttribute("username",username);

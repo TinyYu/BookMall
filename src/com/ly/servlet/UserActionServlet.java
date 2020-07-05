@@ -14,6 +14,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Arrays;
 
+/**
+ * 购买图书
+ */
 @WebServlet(name = "UserActionServlet")
 public class UserActionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,6 +24,7 @@ public class UserActionServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 判断用户是否登陆
         HttpSession session = request.getSession();
         if (session.getAttribute("user") != null){
             if (request.getParameter("action").equals("buybook")){
@@ -40,6 +44,8 @@ public class UserActionServlet extends HttpServlet {
         String book_id = request.getParameter("bookid");
         User user = (User) session.getAttribute("user");
         Book book = bookDAO.getBook(book_id);
+
+        // 判断用户是否已经购买过图书
         String userbook = user.getUserbook();
         String[] userbookArrays = userbook.split(",");
         boolean time = true;
@@ -49,6 +55,8 @@ public class UserActionServlet extends HttpServlet {
                 break;
             }
         }
+
+        // 判断是否是上架用户购买
         if (time && book.getBook_userid() != user.getId()){
 
             // 写入图书id到用户表中

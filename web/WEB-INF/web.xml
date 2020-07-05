@@ -30,6 +30,33 @@
         <url-pattern>/user_action</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserLibraryServlet</servlet-name>
+        <servlet-class>com.ly.servlet.UserLibraryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserLibraryServlet</servlet-name>
+        <url-pattern>/user_library</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OutBookServlet</servlet-name>
+        <servlet-class>com.ly.servlet.OutBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OutBookServlet</servlet-name>
+        <url-pattern>/out_book</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>queryBookServlet</servlet-name>
+        <servlet-class>com.ly.servlet.queryBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryBookServlet</servlet-name>
+        <url-pattern>/query_book</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <!-- 给filter别名 -->
         <filter-name>BookFilter</filter-name>

@@ -4,7 +4,12 @@ import com.ly.entity.User;
 import com.ly.instrument.MysqlISM;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * user表
+ */
 public class UserDAO {
     MysqlISM mysqlISM = new MysqlISM();
 
@@ -155,5 +160,34 @@ public class UserDAO {
             e.printStackTrace();
         }
         return user;
+    }
+
+    /**
+     * 返回用户已购买图书和用户id
+     */
+    public List<User> getUserBuyBook(){
+        List<User> users = new ArrayList<>();
+        String sql = "select * from user";
+        Connection c = null;
+        Statement s = null;
+        try {
+            c = mysqlISM.getConnection();
+            s = c.createStatement();
+            ResultSet rs = s.executeQuery(sql);
+            while (rs.next()){
+                User user = new User();
+                user.setUsername(rs.getString("username")); // 用户名
+                user.setUserpassword(rs.getString("userpassword")); // 密码
+                user.setUsereamil(rs.getString("usereamil")); // 邮箱
+                user.setUserstatus(rs.getInt("userstatus")); // 身份
+                user.setId(rs.getInt("userid")); // 用户id
+                user.setUsermoney(rs.getDouble("usermoney")); // 用户金额
+                user.setUserbook(rs.getString("userbook")); // 用户book
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
     }
 }

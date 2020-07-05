@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * jdbc 数据库驱动和配置
+ */
 public class MysqlISM {
     /**
      * 加载数据库驱动

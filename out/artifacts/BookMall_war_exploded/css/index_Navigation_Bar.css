@@ -206,11 +206,3 @@ li{
     transition-delay: 0.9s;
 }
 
-.div1 .div_herd1{
-    position: absolute;
-    width: 70%;
-    top: 100px;
-    left: 200px;
-    color: #f5f6fa;
-}
-

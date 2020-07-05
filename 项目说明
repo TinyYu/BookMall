@@ -1,0 +1,4 @@
+项目名称: 《小说书城》
+项目概述: 练习JavaWeb项目，无框架
+主要功能: 用户注册、用户登陆、用户修改信息、用户上架商品、用户购买商品、用户下架商品、显示商品
+所用技术: html、css、jquery、particles.js(插件)、jsp、Servlet、Filter、Mysql

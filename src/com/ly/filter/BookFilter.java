@@ -6,6 +6,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * 登陆拦截
+ * 我的书库、上架图书
+ */
 @WebFilter(filterName = "BookFilter")
 public class BookFilter implements Filter {
     public void destroy() {

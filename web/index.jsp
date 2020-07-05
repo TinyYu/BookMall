@@ -17,6 +17,14 @@
           <c:if test="${empty listBook_bestsellers}">
               <%response.sendRedirect("http://localhost:8080/BookMall/book");%>
           </c:if>
+          $("a.buybook").click(function () {
+              var truthBeTold = window.confirm("注意:图书下架，回返图书价格60%!");
+              if (truthBeTold){
+                  return true;
+              } else {
+                  return false;
+              }
+          });
       })
     </script>
   </head>
@@ -35,12 +43,18 @@
         <span id="userSpan">${sessionScope.user.getUsername() == null ? "<a href=\"user/userlogin.jsp\">登陆</a> | <a href=\"user/userRegister.jsp\">注册</a>" : "<a href=\"http://localhost:8080/BookMall/user?action=outuser\">注销用户</a>"}</span>
       </li>
 
-      <li class="liNa"><img src="image/Navigation_page.png" class="liImg"/> 首页</li>
-      <li class="liNa"><img src="image/Navigation_book.png" class="liImg"/> 我的书库</li>
-        <a href="userbook/newBook.jsp" id="newBook"><li class="liNa" ><img src="image/Navigation_store.png" class="liImg"/> 上架图书</li></a>
-      <li class="liNa"><img src="image/Navigational_shopping_cart.png" class="liImg"/> 购物车</li>
+        <a href="index.jsp"><li class="liNa"><img src="image/Navigation_page.png" class="liImg"/> 首页</li></a>
+        <a href="userbook/userLibrary.jsp"><li class="liNa"><img src="image/Navigation_book.png" class="liImg"/> 我的书库</li></a>
+        <a href="userbook/newBook.jsp"><li class="liNa" ><img src="image/Navigation_store.png" class="liImg"/> 上架图书</li></a>
     </ul>
-    <span class="spanSeek"><img src="image/seek.png" class="spanImg"><input type="text" name="bookName" class="spanSeekInput" placeholder="查找书名..."></span>
+
+    <form action="http://localhost:8080/BookMall/query_book" method="post">
+            <span class="spanSeek">
+                <img src="<%=request.getContextPath()%>/image/seek.png" class="spanImg">
+                <input type="text" name="bookName" class="spanSeekInput" placeholder="查找书名...">
+                <input type="hidden" value="seek">
+            </span>
+    </form>
 
     <div class="div1">
         <div class="div_herd">
@@ -56,8 +70,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
-                            <a href="#">加入购物车</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}" class="buybook">￥ ${listbook.getBook_money()}</a>
                         </div>
                     </div>
                 </c:forEach>
@@ -66,7 +79,7 @@
 
         <div class="div_herd" style="top: 600px;">
             <h2>玄幻</h2>
-            <a href="#">更多 》</a>
+            <a href="<%=request.getContextPath()%>/booktype/book_xh.jsp">更多 》</a>
             <hr/>
             <div class="container">
                 <c:forEach items="${bookList_xh}" var="listbook" varStatus="st">
@@ -78,8 +91,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
-                            <a href="#">加入购物车</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}" class="buybook">￥ ${listbook.getBook_money()}</a>
                         </div>
                     </div>
                 </c:forEach>
@@ -88,7 +100,7 @@
 
         <div class="div_herd" style="top: 1200px;">
             <h2>科幻</h2>
-            <a href="#">更多 》</a>
+            <a href="<%=request.getContextPath()%>/booktype/book_kh.jsp">更多 》</a>
             <hr/>
             <div class="container">
                 <c:forEach items="${bookList_kh}" var="listbook" varStatus="st">
@@ -100,8 +112,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
-                            <a href="#">加入购物车</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}" class="buybook">￥ ${listbook.getBook_money()}</a>
                         </div>
                     </div>
                 </c:forEach>
@@ -110,7 +121,7 @@
 
         <div class="div_herd" style="top: 1800px;">
             <h2>都市</h2>
-            <a href="#">更多 》</a>
+            <a href="<%=request.getContextPath()%>/booktype/book_ds.jsp">更多 》</a>
             <hr/>
             <div class="container">
                 <c:forEach items="${bookList_ds}" var="listbook" varStatus="st">
@@ -122,8 +133,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}">￥ ${listbook.getBook_money()}</a>
-                            <a href="#">加入购物车</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}" class="buybook">￥ ${listbook.getBook_money()}</a>
                         </div>
                     </div>
                 </c:forEach>
@@ -132,7 +142,7 @@
 
         <div class="div_herd" style="top: 2400px;">
             <h2>武侠</h2>
-            <a href="#">更多 》</a>
+            <a href="<%=request.getContextPath()%>/booktype/book_wx.jsp">更多 》</a>
             <hr/>
             <div class="container">
                 <c:forEach items="${bookList_wx}" var="listbook" varStatus="st">
@@ -144,8 +154,7 @@
                             <h2>${listbook.getBook_name()}</h2>
                             <p>${listbook.getBook_intro()}</p>
                             <p>销量:${listbook.getBook_volume()}</p>
-                            <a href="#">￥ ${listbook.getBook_money()}</a>
-                            <a href="#">加入购物车</a>
+                            <a href="http://localhost:8080/BookMall/user_action?action=buybook&bookid=${listbook.getBook_id()}" class="buybook">￥ ${listbook.getBook_money()}</a>
                         </div>
                     </div>
                 </c:forEach>
